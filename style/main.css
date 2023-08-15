@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* html {
+    overflow: auto;
+} */
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN";
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+textarea {
+    font-family: inherit;
+    resize: vertical;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* **************************************** */
+
+header {
+    height: 13vh;
+    width: 100%;
+    background: linear-gradient(to right, #33A656EE, #ffffffEE);
+    position: fixed;
+    top: 0;
+}
+
+.header-logo {
+    height: 13vh;
+}
+
+/* **************************************** */
+
+.main {
+    padding: 100px 0 0 0;
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+/* **************************************** */
+
+/* .textButtons {
+    display: flex;
+} */
+.processButton {
+    margin-left: auto;
+}
+.processDeleteButton {
+    margin-right: auto;
+}
+
+/* **************************************** */
+
+.processTitle {
+    margin-bottom: 10px;
+}
+
+.processElement {
+    display: flex;
+}
+.processRadio {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* **************************************** */
+
+#inputDiv, #outputDiv {
+    text-align: center;
+    height: auto;
+    width: 50%;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+#inputDiv {
+    margin-left: 10px;
+    padding-bottom: 5px;
+    border: 0.3px solid #238636;
+    border-radius: 4px 0 0 4px;
+}
+#outputDiv {
+    margin-right: 10px;
+    border: 0.3px solid #333333;
+    border-radius: 0 4px 4px 0;
+
+}
+
+
+#inputText, #outputText {
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    width: 80%;
+}
+
+textarea::placeholder {
+	color: #036616DD;
+}
+
+.button {
+    margin: 10px 40px 0 40px;
+    padding: 8px 24px;
+    color: #FFFFFF;
+    background-color: #238636;
+    opacity: 1;
+    border-radius: 4px;
+    box-shadow: 0;
+    display: inline-block;
+    user-select: none;
+}
+
+.button:hover {
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+/* .explanation {
+    padding-left: 10px;
+} */
+
+footer {
+    width: 100%;
+    padding: 9px 5px 5px 5px;
+    position: fixed;
+    bottom: 0;
+    background-color: #DDDDDD;
+}
+
+.footer-Logo {
+    padding-left: 5px;
+    float: left;
+}
+.footer-list li {
+    float: left;
+    padding: 0 5px;
+    list-style: none;
+}

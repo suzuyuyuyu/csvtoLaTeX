@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LaTeX table</title>
+    <link rel="icon" type="image/x-icon" href="asset/fig/Logo_hex.ico">
+    <link rel="apple-touch-icon" sizes="600x600" href="asset/fig/Logo_hex.svg">
+    <link rel="stylesheet" href="style/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+</head>
+<body>
+    
+    <header>        
+        <div class="container">
+            <div class="header" style="text-align: center;">
+                <img class="header-logo" src="asset/fig/convlogo_transp.svg">
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main">
+        <div id="inputDiv">
+            <label for="inputText"><span class="inputTitle"><h2>Input</h2></span></label>
+            <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)"></textarea>
+
+            <div class="textButtons">
+                <div class="processButton">
+                    <a onclick="processText()" class="button conv">Convert</a>
+                </div>
+                <div class="processDeleteButton">
+                    <a onclick="deleteText()" class="button delete">Delete All</a>
+                </div>
+            </div>
+            
+
+            <div id="process">
+                <br>
+                <label for="separator"><span class="processTitle"><h3>Settings</h3></span></label>
+                
+                <div class="processElement">
+                    <div class="processRadio">
+                        
+                        <input type="radio" id="tabRadio" name="separator" value="tab" checked>
+                        <label for="tabRadio">タブ区切り</label><br>
+
+                        <input type="radio" id="commaRadio" name="separator" value="comma">
+                        <label for="commaRadio">カンマ区切り</label><br>
+
+                    </div>
+
+                    <!-- <div class="processHline">
+                        
+                    </div> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="outputDiv">
+            <label for="outputText"><div class="outputTitle"><h2>Processed</h2></div></label>
+            <textarea id="outputText" type="text" rows="8" readonly></textarea><br>
+            <a onclick="copyToClipboard()" class="button copy">Copy</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-Logo"><h3>Contacts:</h3></div>
+        <div class="footer-list">
+            <ul>
+                <li><a href="https://github.com/suzuyuyuyu"><img src="asset/fig/githubLogo.svg"></a></li>
+                <li><a href="#"><img src="asset/fig/gmailLogo.svg"></a></li>
+                <li><a href="#"><img src="asset/fig/twitterLogo.svg"></a></li>
+                <li><a href="#"><img src="asset/fig/instagramLogo.svg"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
