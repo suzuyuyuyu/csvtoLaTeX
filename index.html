@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style/main.css">
     <script type="text/javascript" src="script/main.js"></script>
 </head>
-<body>
-    
-    <header>        
+<body id="bodyAll">
+
+    <header>
         <div class="container">
             <div class="header" style="text-align: center;">
                 <img class="header-logo" src="asset/fig/convlogo_transp.svg">
@@ -21,7 +21,10 @@
 
     <div class="main">
         <div id="inputDiv">
-            <label for="inputText"><span class="inputTitle"><h2>Input</h2></span></label>
+            <label for="inputText"><div class="inputTitle"><h2>Input</h2></div></label>
+            <p id="copiedLabelDummy" >
+                <!-- copied! -->
+            </p>
             <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)"></textarea>
 
             <div class="textButtons">
@@ -32,35 +35,31 @@
                     <a onclick="deleteText()" class="button delete">Delete All</a>
                 </div>
             </div>
-            
 
-            <div id="process">
+
+            <div id="processSetting">
                 <br>
                 <label for="separator"><span class="processTitle"><h3>Settings</h3></span></label>
-                
+
                 <div class="processElement">
                     <div class="processRadio">
-                        
                         <input type="radio" id="tabRadio" name="separator" value="tab" checked>
                         <label for="tabRadio">タブ区切り</label><br>
 
                         <input type="radio" id="commaRadio" name="separator" value="comma">
                         <label for="commaRadio">カンマ区切り</label><br>
-
                     </div>
-
                     <!-- <div class="processHline">
-                        
                     </div> -->
-
                 </div>
-
             </div>
-
         </div>
 
         <div id="outputDiv">
             <label for="outputText"><div class="outputTitle"><h2>Processed</h2></div></label>
+            <p id="copiedLabel">
+                copied!
+            </p>
             <textarea id="outputText" type="text" rows="8" readonly></textarea><br>
             <a onclick="copyToClipboard()" class="button copy">Copy</a>
         </div>
@@ -68,14 +67,16 @@
     </div>
 
     <footer>
-        <div class="footer-Logo"><h3>Contacts:</h3></div>
-        <div class="footer-list">
-            <ul>
-                <li><a href="https://github.com/suzuyuyuyu"><img src="asset/fig/githubLogo.svg"></a></li>
-                <li><a href="#"><img src="asset/fig/gmailLogo.svg"></a></li>
-                <li><a href="#"><img src="asset/fig/twitterLogo.svg"></a></li>
-                <li><a href="#"><img src="asset/fig/instagramLogo.svg"></a></li>
-            </ul>
+        <div class="footerElement">
+            <div class="footer-Logo"><h3>Contacts:</h3></div>
+            <div class="footer-list">
+                <ul>
+                    <li><a href="https://github.com/suzuyuyuyu"><img src="asset/fig/githubLogo.svg"></a></li>
+                    <li><a href="#"><img src="asset/fig/gmailLogo.svg"></a></li>
+                    <li><a href="#"><img src="asset/fig/twitterLogo.svg"></a></li>
+                    <li><a href="#"><img src="asset/fig/instagramLogo.svg"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

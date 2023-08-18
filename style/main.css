@@ -15,6 +15,8 @@ body {
 textarea {
     font-family: inherit;
     resize: vertical;
+    font-size: 13px;
+    line-height: 15px;
 }
 
 a {
@@ -37,8 +39,43 @@ header {
 
 /* **************************************** */
 
+footer {
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    background-color: #DDDDDD;
+    position: fixed;
+    display: inline-block;
+}
+
+.footer-Logo {
+    width: 100px;
+    display: block;
+    padding-left: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-list {
+    padding-left: 100px;
+    padding-top: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-list li {
+    display: inline-block;
+    padding: 0 5px;
+    list-style: none;
+}
+
+
+/* **************************************** */
+
 .main {
-    padding: 100px 0 0 0;
+    padding: 13vh 0;
     background-color: #ffffff;
     display: flex;
     width: 100%;
@@ -58,10 +95,13 @@ header {
 
 /* **************************************** */
 
-.processTitle {
-    margin-bottom: 10px;
+.inputTitle, .outputTitle {
+    padding: 10px 0;
 }
 
+.processTitle {
+    padding: 10px 0;
+}
 .processElement {
     display: flex;
 }
@@ -72,6 +112,14 @@ header {
 }
 
 /* **************************************** */
+
+#copiedLabelDummy, #copiedLabel {
+    text-align: right;
+    height: 15px;
+    padding: 0 25px 7px 25px;
+    color: transparent;
+}
+
 
 #inputDiv, #outputDiv {
     text-align: center;
@@ -84,12 +132,12 @@ header {
 #inputDiv {
     margin-left: 10px;
     padding-bottom: 5px;
-    border: 0.3px solid #238636;
+    border: 1px solid #238636;
     border-radius: 4px 0 0 4px;
 }
 #outputDiv {
     margin-right: 10px;
-    border: 0.3px solid #333333;
+    border: 1px solid #333333;
     border-radius: 0 4px 4px 0;
 
 }
@@ -97,13 +145,18 @@ header {
 
 #inputText, #outputText {
     margin: 0px 10px 0px 10px;
-    padding: 5px;
+    padding: 10px;
     background-color: #ffffff;
     width: 80%;
+    border-radius: 5px;
 }
 
 textarea::placeholder {
-	color: #036616DD;
+	color: #03401677;
+}
+
+#outputText {
+    resize: none;
 }
 
 .button {
@@ -127,20 +180,3 @@ textarea::placeholder {
     padding-left: 10px;
 } */
 
-footer {
-    width: 100%;
-    padding: 9px 5px 5px 5px;
-    position: fixed;
-    bottom: 0;
-    background-color: #DDDDDD;
-}
-
-.footer-Logo {
-    padding-left: 5px;
-    float: left;
-}
-.footer-list li {
-    float: left;
-    padding: 0 5px;
-    list-style: none;
-}
