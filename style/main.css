@@ -139,7 +139,6 @@ footer {
     margin-right: 10px;
     border: 1px solid #333333;
     border-radius: 0 4px 4px 0;
-
 }
 
 
@@ -149,13 +148,15 @@ footer {
     background-color: #ffffff;
     width: 80%;
     border-radius: 5px;
+    line-height: 150%;
 }
 
 textarea::placeholder {
-	color: #03401677;
+    color: #03401677;
 }
 
 #outputText {
+    /* user-select: none; */
     resize: none;
 }
 
