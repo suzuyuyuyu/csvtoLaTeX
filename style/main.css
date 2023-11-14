@@ -26,56 +26,116 @@ a {
 /* **************************************** */
 
 header {
-    height: 13vh;
+    height: 9vh;
     width: 100%;
     background: linear-gradient(to right, #33A656EE, #ffffffEE);
     position: fixed;
     top: 0;
 }
 
-.header-logo {
-    height: 13vh;
+.headerlogo {
+    text-align: center;
+    height: 9vh;
 }
+.header-logo {
+    height: 8.5vh;
+}
+
+/* .links {
+    height: 5vh;
+    font-size: 15px;
+    background: #dddddd;
+    width: 100%;
+    margin: 0px auto;    
+    text-align: center;
+    transition-duration: 0.5s;
+}
+.links-element {
+    display: inline;
+    border: 1px solid black;
+    padding: 0.5vh 20px;
+} */
+
+.links {
+    background-color: #404040;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.links ul li {
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    transition-duration: 0.5s;
+}
+.links ul li a {
+    text-decoration: none;
+}
+
+.links ul li:hover{
+    background-color: #aee0b8;
+}
+.additional-links {
+    display: none;
+}
+.links ul li:hover .additional-links{
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    background-color: #404040;
+    transform: translateX(-10px);
+}
+.links ul li:hover .additional-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+}
+.links ul li:hover .additional-links ul li {
+    display: block;
+    height: 45px;
+    width: 60px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ffffff55;
+}
+.links ul li:hover .additional-links ul li:last-child {
+    border: none;
+    margin-bottom: 5px;
+}
+.links ul li:hover .additional-links ul li:first-child {
+    margin-top: 5px;
+}
+
+.remove-links {
+    background-color: #FFFFFF00;
+    color: #FFFFFF00;
+    transition-duration:0.5s;
+    pointer-events: none;
+}
+.smaller {
+    height: 9vh;
+}
+
 
 /* **************************************** */
 
 footer {
     width: 100%;
-    height: 5vh;
-    bottom: 0;
-    background-color: #DDDDDD;
+    height: 40vh;
+    background-color: #dfdfdfee;
     position: fixed;
     display: inline-block;
-}
-
-.footer-Logo {
-    width: 100px;
-    display: block;
-    padding-left: 5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.footer-list {
-    padding-left: 180px;
-    padding-top: 5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.footer-list li {
-    display: inline-block;
-    padding: 0 5px;
-    list-style: none;
+    left: 0;
+    bottom: 0;
 }
 
 
 /* **************************************** */
 
 .main {
-    padding: 13vh 0;
+    padding: 15vh 0 6vh 0;
+
+}
+.main-content {
     background-color: #ffffff;
     display: flex;
     width: 100%;

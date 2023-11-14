@@ -13,74 +13,117 @@
     <header>
         <div class="container">
             <div class="header">
-                <div class="headerlogo" style="text-align: center;">
+                <div class="headerlogo">
                     <img class="header-logo" src="./asset/icons/logo.svg">
                 </div>
             </div>
+        </div>
+        <div class="links">
+            <ul>
+                <li class="links-element source-elemetnt">Source
+                    <div class="additional-links">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/suzuyuyuyu/csvtoLaTeX">
+                                    <ion-icon name="logo-github">GitHub</ion-icon>
+                                    <!-- GitHub -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="links-element contact-element">Contact
+                    <div class="additional-links">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/suzuyuyuyu">
+                                    <ion-icon name="logo-github">GitHub</ion-icon>
+                                    <!-- GitHub -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/suzuyuyuyu_">
+                                    <ion-icon name="logo-twitter">Twitter</ion-icon>
+                                    <!-- Twitter -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/suzuyuyuyu_">
+                                    <ion-icon name="logo-instagram">Instagram</ion-icon>
+                                    <!-- Instagram -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:yuta.suzuki.q6@dc.tohoku.ac.jp">
+                                    <ion-icon name="send-outline">Mail</ion-icon>
+                                    <!-- Send Mail -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </header>
 
 
     <div class="main">
-        <div id="inputDiv">
-            <label for="inputText"><div class="inputTitle"><h2>Input</h2></div></label>
-            <p id="copiedLabelDummy" >
-                <!-- copied! -->
-            </p>
-            <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)"></textarea>
-
-            <div class="textButtons">
-                <div class="processButton">
-                    <a onclick="processText()" class="button conv">Convert</a>
-                </div>
-                <div class="processDeleteButton">
-                    <a onclick="deleteText()" class="button delete">Delete All</a>
-                </div>
-            </div>
-
-
-            <div id="processSetting">
-                <br>
-                <label for="separator"><span class="processTitle"><h3>Settings</h3></span></label>
-
-                <div class="processElement">
-                    <div class="processRadio">
-                        <input type="radio" id="tabRadio" name="separator" value="tab" checked>
-                        <label for="tabRadio">タブ区切り</label><br>
-
-                        <input type="radio" id="commaRadio" name="separator" value="comma">
-                        <label for="commaRadio">カンマ区切り</label><br>
+        <div class="main-content">
+            <div id="inputDiv">
+                <label for="inputText"><div class="inputTitle"><h2>Input</h2></div></label>
+                <p id="copiedLabelDummy" >
+                    <!-- copied! -->
+                </p>
+                <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)"></textarea>
+    
+                <div class="textButtons">
+                    <div class="processButton">
+                        <a onclick="processText()" class="button conv">Convert</a>
                     </div>
-                    <!-- <div class="processHline">
-                    </div> -->
+                    <div class="processDeleteButton">
+                        <a onclick="deleteText()" class="button delete">Delete All</a>
+                    </div>
                 </div>
+    
+                <div id="processSetting">
+                    <br>
+                    <label for="separator"><span class="processTitle"><h3>Settings</h3></span></label>
+    
+                    <div class="processElement">
+                        <div class="processRadio">
+                            <input type="radio" id="tabRadio" name="separator" value="tab" checked>
+                            <label for="tabRadio">タブ区切り</label><br>
+    
+                            <input type="radio" id="commaRadio" name="separator" value="comma">
+                            <label for="commaRadio">カンマ区切り</label><br>
+                        </div>
+                        <!-- <div class="processHline">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="outputDiv">
+                <label for="outputText"><div class="outputTitle"><h2>Processed</h2></div></label>
+                <p id="copiedLabel">
+                    copied!
+                </p>
+                <textarea id="outputText" type="text" rows="8" readonly></textarea><br>
+                <a onclick="copyToClipboard()" class="button copy">Copy</a>
             </div>
         </div>
 
-        <div id="outputDiv">
-            <label for="outputText"><div class="outputTitle"><h2>Processed</h2></div></label>
-            <p id="copiedLabel">
-                copied!
-            </p>
-            <textarea id="outputText" type="text" rows="8" readonly></textarea><br>
-            <a onclick="copyToClipboard()" class="button copy">Copy</a>
+
+        <div class="cell-merge">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempora perspiciatis quidem animi ullam modi deserunt voluptatem doloremque ducimus obcaecati omnis placeat consequatur, cupiditate laudantium sit. Natus esse exercitationem illo labore, molestiae alias! Ea, sed? Saepe numquam perspiciatis debitis inventore iste veritatis, quam sint quod hic. Exercitationem minus inventore, accusantium corporis reiciendis quas eum laudantium rerum atque, iusto voluptatum laboriosam molestiae explicabo dolore, reprehenderit blanditiis magnam! Iste est fugiat suscipit quibusdam. Ducimus doloremque voluptatem voluptates sed nulla eaque blanditiis accusantium praesentium ipsam delectus facere doloribus dolorum, ex ea eum reiciendis nobis natus et quaerat sint at vero. Delectus, aut eum.</p>
         </div>
+
+
+
     </div>
 
-    <footer>
-        <div class="footerElement">
-            <div class="footer-Logo">
-                <h3>Source&Contacts:</h3>
-            </div>
-            <div class="footer-list">
-                <ul>
-                    <li><a href="https://github.com/suzuyuyuyu/csvtoLaTeX"><img src="asset/fig/githubLogo.svg"></a></li>
-                    <li><a href="https://twitter.com/suzuyuyuyu_"><img src="asset/fig/twitterLogo.svg"></a></li>
-                    <li><a href="https://instagram.com/suzuyuyuyu_"><img src="asset/fig/instagramLogo.svg"></a></li>
-                    <li><a href="mailto:yuta.suzuki.q6@dc.tohoku.ac.jp"><img src="asset/fig/gmailLogo.svg"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
