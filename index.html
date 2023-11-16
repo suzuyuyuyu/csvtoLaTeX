@@ -74,7 +74,11 @@
                 <p id="copiedLabelDummy" >
                     <!-- copied! -->
                 </p>
-                <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)"></textarea>
+                <textarea id="inputText" rows="8" placeholder="Excelから直接貼り付け(タブ区切り)またはcsv形式で貼り付け(カンマ区切り)">a, 2.00.E-03, 1.30E+00,aa
+b, 2.00.E+06, 1.30E+01,bb
+c, 2.00.E+00, 1.30E+01,cc
+d, 1.35.E+02, 1.35E+00,dd
+e,v, ,ee</textarea>
     
                 <div class="textButtons">
                     <div class="processButton">
@@ -91,10 +95,10 @@
     
                     <div class="processElement">
                         <div class="processRadio">
-                            <input type="radio" id="tabRadio" name="separator" value="tab" checked>
+                            <input type="radio" id="tabRadio" name="separator" value="tab">
                             <label for="tabRadio">タブ区切り</label><br>
     
-                            <input type="radio" id="commaRadio" name="separator" value="comma">
+                            <input type="radio" id="commaRadio" name="separator" value="comma" checked>
                             <label for="commaRadio">カンマ区切り</label><br>
                         </div>
                         <!-- <div class="processHline">
@@ -111,12 +115,14 @@
                 </p>
                 <textarea id="outputText" type="text" rows="8" readonly></textarea><br>
                 <a onclick="copyToClipboard()" class="button copy">Copy</a>
+                <div id="cell-merge-tbl"></div>
+                <a onclick="cellMergeProcess()" class="button">Merge</a>
             </div>
         </div>
 
 
         <div class="cell-merge">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempora perspiciatis quidem animi ullam modi deserunt voluptatem doloremque ducimus obcaecati omnis placeat consequatur, cupiditate laudantium sit. Natus esse exercitationem illo labore, molestiae alias! Ea, sed? Saepe numquam perspiciatis debitis inventore iste veritatis, quam sint quod hic. Exercitationem minus inventore, accusantium corporis reiciendis quas eum laudantium rerum atque, iusto voluptatum laboriosam molestiae explicabo dolore, reprehenderit blanditiis magnam! Iste est fugiat suscipit quibusdam. Ducimus doloremque voluptatem voluptates sed nulla eaque blanditiis accusantium praesentium ipsam delectus facere doloribus dolorum, ex ea eum reiciendis nobis natus et quaerat sint at vero. Delectus, aut eum.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempora perspiciatis quidem animi ullam modi deserunt voluptatem doloremque ducimus obcaecati omnis placeat consequatur, cupiditate laudantium sit. Natus esse exercitationem illo labore, molestiae alias! Ea, sed? Saepe numquam perspiciatis debitis inventore iste veritatis, quam sint quod hic. Exercitationem minus inventore, accusantium corporis reiciendis quas eum laudantium rerum atque, iusto voluptatum laboriosam molestiae explicabo dolore, reprehenderit blanditiis magnam! Iste est fugiat suscipit quibusdam. Ducimus doloremque voluptatem voluptates sed nulla eaque blanditiis accusantium praesentium ipsam delectus facere doloribus dolorum, ex ea eum reiciendis nobis natus et quaerat sint at vero. Delectus, aut eum.</p> -->
         </div>
 
 

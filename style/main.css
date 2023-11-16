@@ -27,6 +27,7 @@ a {
 
 header {
     height: 9vh;
+    min-height: 50px;
     width: 100%;
     background: linear-gradient(to right, #33A656EE, #ffffffEE);
     position: fixed;
@@ -36,43 +37,42 @@ header {
 .headerlogo {
     text-align: center;
     height: 9vh;
+    min-height: 50px;
+    position: relative;
 }
 .header-logo {
-    height: 8.5vh;
+    height: 9vh;
+    min-height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
 }
 
-/* .links {
-    height: 5vh;
-    font-size: 15px;
-    background: #dddddd;
-    width: 100%;
-    margin: 0px auto;    
-    text-align: center;
-    transition-duration: 0.5s;
-}
-.links-element {
-    display: inline;
-    border: 1px solid black;
-    padding: 0.5vh 20px;
-} */
 
 .links {
     background-color: #404040;
     color: #FFFFFF;
     text-align: center;
+    height: 5vh;
 }
 
 .links ul li {
+    height: 5vh;
+    font-size: 2.5vh;
+    user-select: none;
     display: inline-block;
-    margin: 0px 20px;
-    padding: 5px 10px;
-    transition-duration: 0.5s;
+    margin: 0vh 20px;
+    padding: 1vh 10px;
+    transition-duration: 0s;
+    top: 0;
 }
 .links ul li a {
     text-decoration: none;
 }
 
 .links ul li:hover{
+    height: 5vh;
     background-color: #aee0b8;
 }
 .additional-links {
@@ -81,20 +81,20 @@ header {
 .links ul li:hover .additional-links{
     display: block;
     position: absolute;
-    margin-top: 5px;
     background-color: #404040;
     transform: translateX(-10px);
 }
 .links ul li:hover .additional-links ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 5vh;
 }
 .links ul li:hover .additional-links ul li {
     display: block;
-    height: 45px;
-    width: 60px;
-    padding-top: 10px;
+    height: 6vh;
+    width: 10vh;
+    max-width: 60px;
+    padding-top: 2vh;
     border-bottom: 1px solid #ffffff55;
 }
 .links ul li:hover .additional-links ul li:last-child {
@@ -173,6 +173,7 @@ footer {
 
 /* **************************************** */
 
+/* inputの方にも大きさを揃えるためにダミーを置いています */
 #copiedLabelDummy, #copiedLabel {
     text-align: right;
     height: 15px;
@@ -203,13 +204,20 @@ footer {
 
 
 #inputText, #outputText {
-    margin: 0px 10px 0px 10px;
+    /* margin: 0px 10px; */
+    margin: 0 auto;
     padding: 10px;
     background-color: #ffffff;
     width: 80%;
     border-radius: 5px;
     line-height: 150%;
 
+}
+h2 {
+    font-size: clamp(10px, 5vw, 30px);
+}
+h3 {
+    font-size: clamp(8px, 4vw, 24px);
 }
 
 textarea::placeholder {
@@ -221,8 +229,18 @@ textarea::placeholder {
     resize: none;
 }
 
+#cell-merge-tbl {
+    margin: 0 auto;
+}
+#overviewTable {
+    margin: 3vh auto;
+}
+/* #outputDiv {
+    text-align: center;
+} */
+
 .button {
-    margin: 10px 40px 0 40px;
+    margin: 10px auto 0 auto;
     padding: 8px 24px;
     color: #FFFFFF;
     background-color: #238636;
