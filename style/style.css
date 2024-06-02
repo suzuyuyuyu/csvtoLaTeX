@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN";
+    height: 100%;
+}
+
+textarea {
+    font-family: inherit;
+    resize: vertical;
+    max-height: 30vh;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* **************************************** */
+
+header {
+    height: 8vh;
+    width: 100%;
+    background: linear-gradient(to right, #33A65650, #ffffffee);
+    position: fixed;
+    top: 0;
+}
+
+/* **************************************** */
+
+footer {
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    position: fixed;
+    /* display: inline-block; */
+    display: flex;
+}
+
+.footer-list {
+    padding: auto;
+    /* padding-top: 5px; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-list li {
+    align-items: baseline;
+    display: inline-block;
+    padding: 0 5px;
+    list-style: none;
+}
+
+
+/* **************************************** */
+
+.main {
+    padding: 8vh 0;
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+/* **************************************** */
+
+.processButton {
+    margin-left: auto;
+}
+.processDeleteButton {
+    margin-right: auto;
+}
+
+/* **************************************** */
+
+.inputTitle, .outputTitle {
+    padding: 10px 0;
+}
+
+.processTitle {
+    padding: 10px 0;
+}
+.processElement {
+    display: flex;
+}
+.processRadio {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* **************************************** */
+
+#copiedLabelDummy, #copiedLabel {
+    text-align: right;
+    height: 15px;
+    padding: 0 25px 7px 25px;
+    color: transparent;
+}
+
+
+#inputDiv, #outputDiv {
+    text-align: center;
+    height: auto;
+    width: 50%;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+#inputDiv {
+    margin-left: 10px;
+    padding-bottom: 5px;
+    border: 1px solid #238636;
+    border-radius: 4px 0 0 4px;
+}
+#outputDiv {
+    margin-right: 10px;
+    border: 1px solid #333333;
+    border-radius: 0 4px 4px 0;
+}
+
+
+#inputText, #outputText {
+    margin: 0px 10px 0px 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 80%;
+    border-radius: 5px;
+    line-height: 150%;
+
+}
+
+textarea::placeholder {
+    color: #03401677;
+}
+
+#outputText {
+    /* user-select: none; */
+    resize: none;
+}
+
+.button {
+    margin: 10px 40px 0 40px;
+    padding: 8px 24px;
+    color: #FFFFFF;
+    background-color: #238636;
+    opacity: 1;
+    border-radius: 4px;
+    box-shadow: 0;
+    display: inline-block;
+    user-select: none;
+}
+
+.button:hover {
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+/* .explanation {
+    padding-left: 10px;
+} */
+
